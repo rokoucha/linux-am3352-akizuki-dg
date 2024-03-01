@@ -1,0 +1,24 @@
+From fac89a78360f84284aa197d5d4584a35c1bd332f Mon Sep 17 00:00:00 2001
+From: Rokoucha <6058487+rokoucha@users.noreply.github.com>
+Date: Fri, 1 Mar 2024 23:26:31 +0900
+Subject: [PATCH 2/3] Add am335x-akizuki-dg.dtb build target
+
+---
+ arch/arm/boot/dts/Makefile | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/arch/arm/boot/dts/Makefile b/arch/arm/boot/dts/Makefile
+index ce66ffd5a1bb..5bf2bf6df510 100644
+--- a/arch/arm/boot/dts/Makefile
++++ b/arch/arm/boot/dts/Makefile
+@@ -788,6 +788,7 @@ dtb-$(CONFIG_SOC_TI81XX) += \
+ 	dm8168-evm.dtb \
+ 	dra62x-j5eco-evm.dtb
+ dtb-$(CONFIG_SOC_AM33XX) += \
++	am335x-akizuki-dg.dtb \
+ 	am335x-baltos-ir2110.dtb \
+ 	am335x-baltos-ir3220.dtb \
+ 	am335x-baltos-ir5221.dtb \
+-- 
+2.44.0
+
