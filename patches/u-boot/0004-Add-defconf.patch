@@ -456,7 +456,7 @@ index 0000000000..db3cd53022
 +# CONFIG_USE_BOOTARGS is not set
 +# CONFIG_BOOTARGS_SUBST is not set
 +CONFIG_USE_BOOTCOMMAND=y
-+CONFIG_BOOTCOMMAND="fatload mmc 0:1 0x80200000 zImage;fatload mmc 0:1 0x80f00000 am335x-akizuki-dg.dtb;setenv bootargs console=ttyS0,115200 root=/dev/mmcblk0p2 rootwait loglevel=7 debug;bootz 0x80200000 - 0x80f00000"
++CONFIG_BOOTCOMMAND="run eeprom_program; run findfdt; run init_console; run envboot; run distro_bootcmd"
 +# CONFIG_USE_PREBOOT is not set
 +CONFIG_DEFAULT_FDT_FILE=""
 +# CONFIG_SAVE_PREV_BL_FDT_ADDR is not set
