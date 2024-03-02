@@ -22,7 +22,7 @@ trap 'sudo losetup -d $LOOP' EXIT 1 2 3 15
 sudo parted "${LOOP}" -s mklabel msdos -s mkpart primary fat16 0 16MiB -s set 1 boot on -s mkpart primary ext4 16MiB 100%
 
 sudo mkfs.fat "${LOOP}p1"
-sudo mkfs.ext4 "${LOOP}p2"
+sudo mkfs.ext4 -F "${LOOP}p2"
 
 sudo mount "${LOOP}p1" "${BOOT}"
 sudo mount "${LOOP}p2" "${ROOT}"
