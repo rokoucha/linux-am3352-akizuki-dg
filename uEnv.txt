@@ -1,0 +1,13 @@
+bootpart=0:1
+devtype=mmc
+bootdir=
+bootfile=zImage
+bootpartition=mmcblk0p2
+fdtfile=am335x-akizuki-dg.dtb
+console=ttyS0,115200
+loadaddr=0x80200000
+fdtaddr=0x80f00000
+load_kernel=fatload mmc ${bootpart} ${loadaddr} ${bootfile}
+load_fdt=fatload mmc ${bootpart} ${fdtaddr} ${fdtfile}
+set_bootargs=setenv bootargs console=${console} root=/dev/${bootpartition} rw rootfstype=ext4 rootwait
+uenvcmd=run load_kernel; run load_fdt; run set_bootargs; printenv bootargs; bootz ${loadaddr} - ${fdtaddr}
