@@ -1,13 +1,16 @@
-bootpart=0:1
+bootpart=0:2
 devtype=mmc
-bootdir=
+bootdir=/boot
 bootfile=zImage
 bootpartition=mmcblk0p2
 fdtfile=am335x-akizuki-dg.dtb
+rdfile=initramfs-linux.img
 console=ttyS0,115200
-loadaddr=0x80200000
-fdtaddr=0x80f00000
-load_kernel=fatload mmc ${bootpart} ${loadaddr} ${bootfile}
-load_fdt=fatload mmc ${bootpart} ${fdtaddr} ${fdtfile}
+loadaddr=0x82000000
+fdtaddr=0x88000000
+rdaddr=0x88080000
+load_kernel=load mmc ${bootpart} ${loadaddr} ${bootdir}/${bootfile}
+load_fdt=load mmc ${bootpart} ${fdtaddr} ${bootdir}/${fdtfile}
+load_rd=load mmc ${bootpart} ${rdaddr} ${bootdir}/${rdfile}; setenv rdsize ${filesize}
 set_bootargs=setenv bootargs console=${console} root=/dev/${bootpartition} rw rootwait
-uenvcmd=run load_kernel; run load_fdt; run set_bootargs; printenv bootargs; bootz ${loadaddr} - ${fdtaddr}
+uenvcmd=run load_kernel; run load_fdt; run load_rd; run set_bootargs; printenv bootargs; bootz ${loadaddr} ${rdaddr}:${rdsize} ${fdtaddr}
