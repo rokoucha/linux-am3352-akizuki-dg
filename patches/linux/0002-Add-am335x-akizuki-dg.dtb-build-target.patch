@@ -1,24 +1,24 @@
-From fac89a78360f84284aa197d5d4584a35c1bd332f Mon Sep 17 00:00:00 2001
+From ebad62147cda55ee8cf744ecdec1a0bdf3828dfb Mon Sep 17 00:00:00 2001
 From: Rokoucha <6058487+rokoucha@users.noreply.github.com>
-Date: Fri, 1 Mar 2024 23:26:31 +0900
-Subject: [PATCH 2/3] Add am335x-akizuki-dg.dtb build target
+Date: Sat, 24 Oct 2026 23:38:20 +0900
+Subject: [PATCH 2/2] Add am335x-akizuki-dg.dtb build target
 
 ---
- arch/arm/boot/dts/Makefile | 1 +
+ arch/arm/boot/dts/ti/omap/Makefile | 1 +
  1 file changed, 1 insertion(+)
 
-diff --git a/arch/arm/boot/dts/Makefile b/arch/arm/boot/dts/Makefile
-index ce66ffd5a1bb..5bf2bf6df510 100644
---- a/arch/arm/boot/dts/Makefile
-+++ b/arch/arm/boot/dts/Makefile
-@@ -788,6 +788,7 @@ dtb-$(CONFIG_SOC_TI81XX) += \
- 	dm8168-evm.dtb \
- 	dra62x-j5eco-evm.dtb
+diff --git a/arch/arm/boot/dts/ti/omap/Makefile b/arch/arm/boot/dts/ti/omap/Makefile
+index 3a4d9204339b..6b35b90f5607 100644
+--- a/arch/arm/boot/dts/ti/omap/Makefile
++++ b/arch/arm/boot/dts/ti/omap/Makefile
+@@ -89,6 +89,7 @@ am335x-bonegreen-hdmi-00a0-dtbs := am335x-bonegreen-eco.dtb \
+ 	am335x-bone-hdmi-00a0.dtbo
+ 
  dtb-$(CONFIG_SOC_AM33XX) += \
 +	am335x-akizuki-dg.dtb \
  	am335x-baltos-ir2110.dtb \
  	am335x-baltos-ir3220.dtb \
  	am335x-baltos-ir5221.dtb \
 -- 
-2.44.0
+2.56.0
 

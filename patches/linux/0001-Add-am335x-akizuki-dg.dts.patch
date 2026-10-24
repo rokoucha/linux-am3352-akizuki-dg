@@ -1,18 +1,18 @@
-From 6574d76a151f7faca9fb31f89723d66c1767cf24 Mon Sep 17 00:00:00 2001
+From 91a218554a9e1f7177822fc74ed09f511f26099a Mon Sep 17 00:00:00 2001
 From: Rokoucha <6058487+rokoucha@users.noreply.github.com>
-Date: Fri, 1 Mar 2024 23:26:13 +0900
-Subject: [PATCH 1/3] Add am335x-akizuki-dg.dts
+Date: Sat, 24 Oct 2026 23:38:20 +0900
+Subject: [PATCH 1/2] Add am335x-akizuki-dg.dts
 
 ---
- arch/arm/boot/dts/am335x-akizuki-dg.dts | 480 ++++++++++++++++++++++++
+ .../boot/dts/ti/omap/am335x-akizuki-dg.dts    | 480 ++++++++++++++++++
  1 file changed, 480 insertions(+)
- create mode 100644 arch/arm/boot/dts/am335x-akizuki-dg.dts
+ create mode 100644 arch/arm/boot/dts/ti/omap/am335x-akizuki-dg.dts
 
-diff --git a/arch/arm/boot/dts/am335x-akizuki-dg.dts b/arch/arm/boot/dts/am335x-akizuki-dg.dts
+diff --git a/arch/arm/boot/dts/ti/omap/am335x-akizuki-dg.dts b/arch/arm/boot/dts/ti/omap/am335x-akizuki-dg.dts
 new file mode 100644
-index 000000000000..b1c5c3cdf755
+index 000000000000..0ffdc28c4681
 --- /dev/null
-+++ b/arch/arm/boot/dts/am335x-akizuki-dg.dts
++++ b/arch/arm/boot/dts/ti/omap/am335x-akizuki-dg.dts
 @@ -0,0 +1,480 @@
 +// SPDX-License-Identifier: GPL-2.0-only
 +/*
@@ -315,7 +315,7 @@ index 000000000000..b1c5c3cdf755
 +};
 +*/
 +
-+/include/ "tps65217.dtsi"
++/include/ "../../tps65217.dtsi"
 +
 +&tps {
 +	/delete-property/ ti,pmic-shutdown-controller;
@@ -495,5 +495,5 @@ index 000000000000..b1c5c3cdf755
 +	regulator-always-on;
 +};
 -- 
-2.44.0
+2.56.0
 

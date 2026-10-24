@@ -36,7 +36,7 @@ sudo rm -rf "${ROOT}/boot"
 ./build-linux-dtbs.sh
 ./build-u-boot.sh
 
-sudo cp ./uEnv.txt ./u-boot/MLO ./u-boot/u-boot.img ./linux/arch/arm/boot/dts/am335x-akizuki-dg.dtb "${BOOT}"
+sudo cp ./uEnv.txt ./u-boot/MLO ./u-boot/u-boot.img ./linux/arch/arm/boot/dts/ti/omap/am335x-akizuki-dg.dtb "${BOOT}"
 
 sudo dd if=./u-boot/MLO of="${LOOP}" count=1 seek=1 conv=notrunc bs=128k
 sudo dd if=./u-boot/u-boot.img of="${LOOP}" count=2 seek=1 conv=notrunc bs=384k

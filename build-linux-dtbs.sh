@@ -6,7 +6,7 @@ ARCH=arm
 
 pushd ./linux
 
-git switch -d v6.2
+git switch -d v7.2.11
 git apply ../patches/linux/*.patch
 
 make ARCH="${ARCH}" multi_v7_defconfig
