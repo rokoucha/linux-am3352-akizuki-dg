@@ -1,4 +1,4 @@
-From 91a218554a9e1f7177822fc74ed09f511f26099a Mon Sep 17 00:00:00 2001
+From 008b8a478fdefa00b3c0f1fc841dd44f2e9ff189 Mon Sep 17 00:00:00 2001
 From: Rokoucha <6058487+rokoucha@users.noreply.github.com>
 Date: Sat, 24 Oct 2026 23:38:20 +0900
 Subject: [PATCH 1/2] Add am335x-akizuki-dg.dts
@@ -10,7 +10,7 @@ Subject: [PATCH 1/2] Add am335x-akizuki-dg.dts
 
 diff --git a/arch/arm/boot/dts/ti/omap/am335x-akizuki-dg.dts b/arch/arm/boot/dts/ti/omap/am335x-akizuki-dg.dts
 new file mode 100644
-index 000000000000..0ffdc28c4681
+index 000000000..0ffdc28c4
 --- /dev/null
 +++ b/arch/arm/boot/dts/ti/omap/am335x-akizuki-dg.dts
 @@ -0,0 +1,480 @@
